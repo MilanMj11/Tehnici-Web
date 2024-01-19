@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  background-color: rgb(232, 14, 14);
+  height: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header>img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Welcome{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  padding-left: 20px;
+}
+
+.logo_class{
+  border-radius: 50%;
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 5rem;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.content{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.content > img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 30px;
+  transition: transform 0.6s;
+}
+
+.content > img:hover {
+  transform: scale(1.4) rotate(360deg);
+}
+
+.content > a > h1 {
+  text-align: center;
+  margin-right: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  transition: transform 0.5s;
+}
+
+.content > a > h1:hover{
+  transform: scale(1.2);
+}
+
+.client{
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.client > p{
+  padding: 10px;
+}
+
+.paragraf1{
+  border: 2px solid black;
+  border-radius: 50px;
+  position: relative  ;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(0, 0, 0);
+  font-weight: 600;
+  text-align: center;
+}
+
+.avertizare{
+  border: 2px solid red;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(232, 14, 14);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.circle{
+  border-radius: 50%;
+  border: 2px solid red;
+}
+
+.image-container {
+  width: 100vw;
+  max-width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  animation-name: image-change;
+  animation-duration: 16s; /* time interval between image changes */
+  animation-iteration-count: infinite; /* repeat infinitely */
+  text-align: center;
+}
+
+@keyframes image-change {
+  0% {
+    background-image: url('imagine1.jpg');
+  }
+  20%{
+    background-image: url('imagine1.jpg');
+  }
+  25% {
+    background-image: url('imagine2.avif');
+  }
+  45%{
+    background-image: url('imagine2.avif');
+  }
+  50% {
+    background-image: url('imagine3.avif');
+  }
+  70%{
+    background-image: url('imagine3.avif');
+  }
+  75%{
+    background-image: url('imagine4.jpg');
+  }
+  95%{
+    background-image: url('imagine4.jpg');
+  }
+  100% {
+    background-image: url('imagine1.jpg');
+  }
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(255, 2, 2, 0.2);
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+
+nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f00;
+  transition: all 0.2s ease-in-out;
+}
+
+
+nav ul li a {
+  color: #333;
+  text-decoration: double;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li:hover a {
+  color: #f00;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 1px 5px rgba(218, 129, 129, 0.2);
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  height: 60px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0.5px;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid black;
+  overflow: hidden;
+}
+
+nav ul li ul li:hover a {
+  color: #f00;
+}
+
+
+.membru{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangular-box {
+  width: 90%;
+  max-width: 1500px;
+  height: 340px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.5s ease-in-out;
+  border: 0.5px solid rgb(209, 204, 204);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.rectangular-box > img {
+  float: left;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  height: 339px;
+}
+
+.rectangular-box > h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+.rectangular-box:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.rectangular-box > p {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  color: red;
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+}
+
+.checkmark > img {
+  display: inline-block;
+  width: 25px;
+}
+.checkmark > p {
+  margin-top: 50px;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+#interactiv{
+  align-items: center;
+  display: flex;
+}
+
+#interactiv > div{
+  width: 30vw;
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  border: 1px solid gray;
+  margin-left: 2vw;
+  height: 300px;
+  transition: box-shadow 0.5s ease-in-out;
+  align-items: center;
+}
+#interactiv > div:hover{
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 2.7); 
+}
+#interactiv > div:nth-child(1)>img{
+  background-color: inherit;
+  height: 15%;
+  transition: transform 0.5s ease;
+  border-radius: 25%;
+  border: 1px solid black;
+}
+#interactiv > div:nth-child(1)>img:hover{
+  transform: scale(2.2);
+}
+#followImage {
+  position: fixed;
+  pointer-events: none;
+  width: 50px;
+  height: auto;
+}
+
+#pasteDiv {
+  width: 50px;
+  height: 500px;
+  border: 1px solid black;
+  position: relative;
+}
