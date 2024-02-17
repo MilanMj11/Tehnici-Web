@@ -10,6 +10,6 @@ It is organised in html, css and javascript files.
 
 ## Notes
 While being responsive ( has elements such as : media queries , relative units and display types ) , the project maintains coherence across its various elements, and the content is both cohesive and meaningful.
-It simulates a real
+It simulates a real karting website.
 
 Although it's a sketch, the project effectively emulates a karting company website with logical coherence in its elements.
